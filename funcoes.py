@@ -43,9 +43,8 @@ def raiz_de(x):
         print('Não é possível calcular a raiz de um numero negativo.')
         return None
     resultado_raiz = x ** 0.5
-    if resultado_raiz.is_integer():
-        resultado_raiz = int(resultado_raiz)
-        print(f'A raiz de {x} é:', resultado_raiz)
+    if isinstance(resultado_raiz, float):
+        print(f'A raiz de {x} é: {resultado_raiz:.4f}')
     return resultado_raiz
 
 def tabuada(start, *stop):
